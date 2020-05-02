@@ -243,10 +243,8 @@ export default function Grade(){
 
     async function handleSubmit(e){
         e.preventDefault();
-
         
-        if(turno_id === 1){
-            
+        if(turno_id == 1){
             setMinino(true)
             setMaximo(true)
         }   else {
@@ -497,7 +495,7 @@ export default function Grade(){
                     <option value={5} >Sexta-feira</option>
                 </select>
 
-               <input type='time' min={minimo ? "07:00" : "13:00"} max={maximo ? "13:00" : "17:00"} value={horario} onChange={e => setHorario(e.target.value)} />
+               <input type='time' min={minimo ? "07:00" : "12:00"} max={maximo ? "12:00" : "17:00"} value={horario} onChange={e => setHorario(e.target.value)} />
         
             </div>
             <button>Adicionar</button>   

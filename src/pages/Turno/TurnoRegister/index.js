@@ -35,7 +35,7 @@ export default function TurnoRegister(){
 
 
         } catch (error) {
-            alert('Não foi possível concluir cadastro!');
+            alert(error.response.data)
         }
     }
 
@@ -61,9 +61,9 @@ export default function TurnoRegister(){
                         onChange={e => setTurno(e.target.value)}
                     >
                         <option value=''></option>
-                        <option value='manha'>Manhã</option>
-                        <option value='tarde'>Tarde</option>
-                        <option value='noite'>Noite</option>
+                        <option value='Manhã'>Manhã</option>
+                        <option value='Tarde'>Tarde</option>
+                        <option value='Noite'>Noite</option>
 
                     </select>
                     
