@@ -1,0 +1,190 @@
+.container-edit-professor{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+}
+
+.component-edit-professor {
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.component-edit-professor div:first-child{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.component-edit-professor div h1 {
+    color: #000;
+    font-size: 25px;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.component-edit-professor div button {
+    width: 150px;
+    height: 40px;
+    border-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: rgb(196, 84, 56);
+    color: #FFFFFF;
+    text-transform: uppercase;
+    
+}
+
+.component-edit-professor form{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    background: #e9ebee;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    padding: 20px;
+    
+}
+
+
+.component-edit-professor form input{
+    width: 80%;
+    height: 45px;
+    margin: 5px;
+    border-radius: 8px;
+    padding: 10px;
+    border-width: 0;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+.component-edit-professor form div{
+    display: flex;
+    width: 100%;
+    
+}
+.component-edit-professor form div input:first-child{
+    margin-left: 11%;
+}
+
+.component-edit-professor form div input + input {
+    margin-right: 12%;
+    margin-left: 2px;
+}
+
+.component-edit-professor form button {
+    width: 60%;
+    height: 38px;
+    border-width: 0;
+    border-radius: 8px;
+    background-color: #395B7E;
+    color: #FFF;
+    margin-top: 10px;
+    font-size: 26px;
+}
+.component-edit-professor span{
+    font: 600 20px Roboto, sans-serif;
+    text-transform: uppercase;
+    margin: 10px auto;
+}
+
+.component-edit-professor .buttonGroup{
+    display: flex;
+    width: 70%;
+    height: 90px;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    background-color: #ebebe4;
+    border-radius: 8px;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+.component-edit-professor .buttonGroup label{
+    font: 500 14px Roboto, sans-serif;
+    
+}
+
+.component-edit-professor .buttonGroup input{
+    width: 30px;
+    background-color: #395B7E;
+    box-shadow: 0px 0px 0px;
+}
+
+@media only screen and (max-width: 920px){
+    .component-edit-professor {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.component-edit-professor div:first-child{
+    width: 80%;
+    justify-content: space-around;
+    text-transform: none;
+    margin-left: 20px;
+}
+
+.component-edit-professor div h1 {
+    font-size: 20px;
+}
+
+.component-edit-professor div button {
+    width: 40%;
+    text-transform: none;
+    
+}
+
+.component-edit-professor form{
+    width: 80%;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+
+.component-edit-professor form input{
+    width: 100%;
+}
+
+.component-edit-professor form div{
+    display: flex;
+    width: 100%;
+    
+}
+.component-edit-professor form select{
+    width: 100%;
+}
+
+.component-edit-professor form button {
+    width: 100%;
+    font-size: 20px;
+}
+.component-edit-professor span{
+    text-transform: none;
+}
+
+.component-edit-professor .buttonGroup{
+    
+    width: 100%;
+}
+
+
+
+.component-edit-professor .buttonGroup input{
+    width: 30px;
+    background-color: #395B7E;
+    box-shadow: 0px 0px 0px;
+}
+}

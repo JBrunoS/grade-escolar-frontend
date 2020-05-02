@@ -1,0 +1,337 @@
+.form-modal-register {
+    width: 40%;
+    height: auto;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-modal-register h1{
+    margin-bottom: 5px;
+}
+
+.form-modal-register input{
+    width: 80%;
+    height: 45px;
+    align-items: center;
+    border-width: 0;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 4px rgba(61, 59, 59, 0.432);
+    padding-left: 20px;
+}
+.form-modal-register div {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.form-modal-register select{
+    width: 80%;
+    margin-top: 5px;
+}
+.form-modal-register input:last-child{
+    border-radius: 8px;
+    width: 40%;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.form-modal-register button {
+    width: 80%;
+    height: 40px;
+    border-width: 0px;
+    border-radius: 4px;
+    margin-top: 10px;
+    background-color: rgb(32, 165, 80);
+    color: #FFFFFF; 
+    font-size: 24px;
+}
+
+.grade-professor {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #FFFFFF;
+}
+
+.grade-professor-horario {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.grade-professor-horario div:first-child{
+    background-color: rgb(32, 165, 80);
+}
+
+.grade-professor-horario div{
+    width: 10%;
+    height: 98%;
+    background-color: #f1a576;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2px;
+}
+
+.grade-professor-horario div span{
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+
+.container-grade{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    
+}
+
+.component-grade {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    margin: 10px auto;
+}
+
+.button-group-grade {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+    margin-bottom: 10px;
+}
+
+.button-group-grade select{
+    width: 25%;
+    height: 40px;
+    border-width: 2;
+    border-radius: 8px;
+    border-color: #3878C4;
+    color: #3878C4;
+    
+    padding-left: 10px;
+}
+
+
+.button-group-grade button {
+    width: 120px;
+    height: 40px;
+    border-width: 0;
+    border-radius: 8px;
+    background-color: #3878C4;
+    color: #FFFFFF;
+    text-transform: uppercase;   
+}
+
+.button-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+.button-group div {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.button-group div select {
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    margin-right: 0px;
+    width: 80%;
+    height: 45px;
+}
+
+.button-group div button{
+    width: 20%;
+    height: 45px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    background-color: #3878C4;
+}
+
+.button-group button{
+    width: 160px;
+    height: 40px;
+    border-width: 0;
+    border-radius: 8px;
+    background-color: rgb(32, 165, 80);
+    color: #FFFFFF;
+    
+}
+
+
+.component-grade table{
+    width: 100%;
+    border-spacing: 1px;
+    
+}
+
+
+
+.component-grade table thead tr th  {
+    width: 20%;
+    height: 30px;
+    text-align: center;
+    font-size: 20px;
+    background-color: #95D03A;
+ }
+
+ .component-grade table thead {
+     color: #FFFFFF
+ }
+
+
+.body-info {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    
+}
+
+.body-info div{
+    width: 20%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    
+    margin: 1px;
+}
+
+.body-info div div{
+    position: relative;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    font-size: 16px;
+    
+}
+.body-info div div a {
+    position: absolute;
+    top: 49.4%;
+    left: 81.5%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.body-info div div a:hover{
+    background-color: rgba(61, 59, 59, 0.432);
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+}
+
+@media only screen and (max-width: 768px){
+    .component-grade {
+        width: 100%;
+        
+    }
+    
+    .button-group-grade {
+        width: 80%;
+        flex-direction: column;
+        text-transform: initial;
+        margin: 5px auto;
+    }
+    
+    .button-group-grade select{
+        width: 100%;
+    }
+    
+    
+    .button-group-grade button {
+        width: 80%;
+        text-transform: initial;   
+    }
+
+    .button-group{
+        width: 90%;
+        margin: 5px auto;
+    }
+    .button-group div {
+        width: 65%;
+    }
+    
+    
+    .button-group button{
+        width: 30%;
+        height: 35px;
+       margin-right: 10px;    
+    }
+    
+    
+    .component-grade table{
+        width: 90%;
+        margin-left: 20px;
+    }
+    
+    
+    
+    .component-grade table thead tr th  {
+        font-size: 16px;
+     }
+
+    
+    
+    .body-info {
+        width: 90%;
+        margin-left: 20px;
+    }
+
+    
+    .body-info div div{
+        position: inherit;
+        width: 100%;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #FFFFFF;
+        font-size: 14px;
+
+    
+    }
+    .body-info div div a {
+        position: inherit;
+    }
+
+    .form-modal-register {
+        width: 100%;
+    }
+    
+   
+    
+    
+}
+

@@ -1,0 +1,96 @@
+.container-turno{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}
+.component-turno {
+    width: 80%;
+    margin-bottom: 30px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.header-turno {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+.header-turno .button {
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 0;
+    border-radius: 8px;
+    background-color: #3878C4;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+
+.component-turno section{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.body-turno {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    background-color: #F2F4EE;
+    padding: 10px;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+}
+.body-turno span{
+    font-weight: 500;
+    padding: 5px;   
+}
+
+@media only screen and (max-width: 760px){
+    .component-turno {
+        width: 100%;
+        
+    }
+    
+    .header-turno {
+        width: 80%;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+    .header-turno h1{
+        font-size: 30px;
+        text-transform: capitalize;
+    }
+    
+    .header-turno .button {
+        width: 40%;
+        text-transform: initial;
+    }
+    
+    
+    .component-turno section{
+        width: 80%;
+        margin-left: 20px;
+    }
+    
+    .body-turno {
+        text-transform: initial;
+    }
+}

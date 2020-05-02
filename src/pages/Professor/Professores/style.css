@@ -1,0 +1,203 @@
+.container-professor{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    
+    
+}
+.component-professor {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    margin-bottom: 30px;
+}
+
+.header-professor {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.header-professor .button {
+    width: 150px;
+    height: 40px;
+    border-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: #3878C4;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.button-group-professor {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+    text-decoration: none;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+    margin-bottom: 30px;
+}
+
+.button-group-professor button{
+    width: 10%;
+    height: 40px;
+    border-width: 0;
+    background-color:  rgb(32, 165, 80);
+    color: #FFFFFF;
+    text-transform: initial;  
+    
+}
+.button-group-professor div {
+    width: 28%;
+    display: flex;
+    align-items: center;
+    
+}
+.button-group-professor div select{
+    width: 80%;
+    height: 40px;
+    margin: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    border-color: #3878C4;
+    color: #3878C4;
+    text-transform: initial;
+    padding-left: 10px;
+}
+
+
+.button-group-professor div button {
+    width: 20%;
+    height: 40px;
+    border-width: 0;
+    
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: #3878C4;
+    color: #FFFFFF;
+    text-transform: initial;   
+}
+.component-professor section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 768px){
+    .component-professor {
+        width: 100%;
+    }
+    .component-professor section {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+    .header-professor {
+        width: 80%;
+    }
+    .header-professor h1 {
+        font-size: 20px;
+    }
+
+    .header-professor .button{
+        width: 40%;
+        text-transform: lowercase;
+        font-size: 16px;
+        -moz-text-size-adjust: auto;
+
+    }
+    .button-group-professor{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .button-group-professor button:first-child{
+        width: 40%;
+        align-self: start;
+        margin-left: 10%;
+        margin-bottom: 10px;
+    }
+
+    .button-group-professor div{
+        width: 80%;
+        margin-bottom: 10px;
+    }
+    
+    
+    
+}
+.body-professor {
+    width: 70%;
+    display: grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap: 20px;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    text-transform: initial;
+    border-radius: 8px;
+    background-color: #F2F4EE;
+    margin-right: 10px;
+    padding: 10px;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+.body-professor div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+.body-professor div span{
+    font-weight: 500;
+    
+    
+}
+.body-professor div:last-child{
+    display: flex;
+    flex-direction: row;
+    
+    
+}
+.body-professor div a{
+    margin-left: 25%;
+}
+
+@media only screen and (max-width: 900px){
+    .body-professor {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        margin-left: 25px;
+    }
+
+    .body-professor div{
+        display: flex;
+        margin: 0;
+        align-items: flex-start;
+    }
+    .body-professor div:last-child{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+

@@ -1,0 +1,130 @@
+.container-nivel{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    
+}
+.component-nivel {
+    width: 80%;
+    margin-bottom: 30px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.header-nivel {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.header-nivel .button {
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 0;
+    border-radius: 8px;
+    background-color: #3878C4;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+.component-nivel section{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.body-nivel {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    background-color: #F2F4EE;
+    padding: 10px;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+}
+.body-nivel span{
+    font-weight: 500;
+    
+}
+
+.form-modal-edit{
+    width: 60%;
+    height: auto;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-modal-edit h3{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.form-modal-edit input{
+    width: 100%;
+    height: 35px;
+    border-width: 0;
+    border-radius: 8px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+.form-modal-edit button{
+    width: 100%;
+    height: 35px;
+    border-width: 0;
+    border-radius: 8px;
+    background-color: #3878C4;
+    color: #FFFFFF;
+}
+
+@media only screen and (max-width: 760px){
+    .component-nivel {
+        width: 100%;
+    }
+    
+    .header-nivel {
+        width: 80%;
+        text-transform: capitalize;
+        margin-left: 20px;
+    }
+    
+    .header-nivel .button {
+        width: 40%;
+        text-transform: none;
+    }
+    
+    
+    .component-nivel section{
+        width: 90%;
+        margin-left: 20px;
+    }
+    
+    .body-nivel {
+        padding: 15px;
+        font-size: 14px;
+    }
+    .body-nivel span{
+        font-weight: 500;
+        
+    }
+}
+

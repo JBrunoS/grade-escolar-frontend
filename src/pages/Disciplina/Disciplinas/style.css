@@ -1,0 +1,173 @@
+.container-disciplina{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+.component-disciplina {
+    width: 80%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    margin: 20px auto;
+}
+
+.header-disciplina {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.header-disciplina .button {
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 0;
+    border-radius: 8px;
+    background-color: #3878C4;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.button-group-disciplina {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+    margin-bottom: 30px;
+}
+.button-group-disciplina button{
+    width: 10%;
+    height: 40px;
+    border-width: 0;
+    background-color:  rgb(32, 165, 80);
+    color: #FFFFFF;
+    text-transform: initial;  
+    
+}
+
+.button-group-disciplina div{
+    width: 28%;
+    display: flex;
+    align-items: center;
+}
+
+.button-group-disciplina div select{
+    width: 80%;
+    height: 40px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    color: #3878C4;
+    text-transform: initial;
+    padding-left: 10px;
+    margin: 0px;
+    
+}
+
+
+.button-group-disciplina div button {
+    width: 20%;
+    height: 40px;
+    border-width: 0;
+    border-radius: 8px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    background-color: #3878C4;
+      
+}
+.component-disciplina section{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-inline-start: 30px;
+    margin-inline-end: 30px;
+    
+}
+
+@media only screen and (max-width: 768px){
+
+    .component-disciplina {
+        width: 100%;
+    }
+    .component-disciplina section {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+        margin-bottom:320px;
+    }
+    .header-disciplina {
+        width: 80%;
+        margin-left: 40px;
+    }
+    .header-disciplina h1 {
+        font-size: 20px;
+    }
+
+    .header-disciplina .button{
+        width: 40%;
+        text-transform: lowercase;
+        font-size: 16px;
+        -moz-text-size-adjust: auto;
+
+    }
+    .button-group-disciplina{
+        width: 100%;
+        flex-direction: column;
+        margin-left: 50px;
+        
+    }
+    .button-group-disciplina button:first-child{
+        width: 40%;
+        align-self: start;
+        margin-left: 10%;
+        margin-bottom: 10px;
+    }
+    .button-group-disciplina div{
+        width: 80%;
+        margin-bottom: 10px;
+    }
+}
+.body-disciplina {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+    text-transform: initial;
+    border-radius: 8px;
+    background-color: #F2F4EE;
+    margin-left: 20px;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+.body-disciplina div{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+.body-disciplina div span{
+    font-weight: 500;
+    padding: 5px;
+    
+}
+.body-disciplina a{
+    margin: 0 auto;
+    
+}
+

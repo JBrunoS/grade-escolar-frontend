@@ -1,0 +1,121 @@
+.container-register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-image: url('../../assets/background.jpg');
+}
+
+.component-register {
+    width: 50%;
+    background: linear-gradient(180deg, #4E95C9 0%, rgba(255, 255, 255, 0) 100%), #3878C3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.component-register h1 {
+    color: #FFF;
+    margin-top: 20px;
+    font-size: 35px;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.component-register form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+
+.component-register form input{
+    width: 60%;
+    height: 45px;
+    margin-bottom: 10px;
+    border-width: 0;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.component-register form div{
+    display: flex;
+    width: 60%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+    
+}
+.component-register form div input:first-child{
+    width: 75%;
+    
+}
+
+.component-register form div input + input {
+    width: 22%;
+    
+    
+}
+
+.component-register form button {
+    width: 320px;
+    height: 38px;
+    border-width: 0;
+    border-radius: 8px;
+    background-color: #395B7E;
+    color: #FFF;
+    margin-top: 10px;
+    font-size: 26px;
+}
+
+.component-register a{
+    font-size: 18px;
+    text-decoration: none;
+    color: #FFF;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.component-register a:hover{
+    font-size: 22px;
+}
+
+@media only screen and (max-width: 768px){
+    .component-register {
+        width: 90%;
+        
+    }
+    
+    
+    .component-register form input{
+        width: 80%;
+    }
+    
+    .component-register form div{
+        
+        width: 80%;
+        
+    }
+    .component-register form div input:first-child{
+        width: 75%;
+        
+    }
+    
+    .component-register form div input + input {
+        width: 22%;
+        
+        
+    }
+    
+    .component-register form button {
+        width: 80%;
+     
+    }
+    
+}

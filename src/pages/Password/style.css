@@ -1,0 +1,83 @@
+.container-password{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-image: url('../../assets/background.jpg');
+
+}
+
+.component-password{
+width: 550px;
+height: 382px;
+background: linear-gradient(180deg, #4E95C9 0%, rgba(255, 255, 255, 0) 100%), #3878C3;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 12px;
+
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+}
+
+.component-password h1 {
+    color: #FFF;
+    margin-top: 30px;
+    font-size: 35px;
+    font-weight: 500;
+    font-style: normal;
+    
+}
+
+.component-password form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.component-password form input {
+    width: 320px;
+    height: 45px;
+    margin: 10px;
+    border-width: 0;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+
+.component-password form button {
+    width: 320px;
+    height: 38px;
+    border-width: 0;
+    border-radius: 8px;
+    background-color: #395B7E;
+    color: #FFF;
+    margin-top: 10px;
+    font-size: 26px;
+}
+.component-password div {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    color: #FFF;
+}
+
+.component-password div a{
+    font-size: 18px;
+    text-decoration: none;
+    color: #FFF;
+}
+
+.component-password div a:hover {
+    font-size: 22px;
+}
+
+.component-password div a:first-child, p{
+    margin-right: 10px;
+}

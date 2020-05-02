@@ -1,0 +1,127 @@
+.container-new-disciplina{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+}
+
+.component-new-disciplina {
+    width: 80%;
+    height: auto;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.component-new-disciplina div:first-child{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.component-new-disciplina div h1 {
+    color: #000;
+    font-size: 25px;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.component-new-disciplina div button {
+    width: 150px;
+    height: 40px;
+    border-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: rgb(196, 84, 56);
+    color: #FFFFFF;
+    text-transform: uppercase;
+    
+}
+
+.component-new-disciplina form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    background: #F2F4EE;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    padding: 30px;
+}
+
+
+.component-new-disciplina form input {
+    width: 80%;
+    height: 45px;
+    margin: 5px;
+    border-radius: 8px;
+    padding: 10px;
+    border-width: 0;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    font-size: 18px;
+}
+
+.component-new-disciplina form select {
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+.component-new-disciplina form button {
+    width: 60%;
+    height: 38px;
+    border-width: 0;
+    border-radius: 8px;
+    background-color: #395B7E;
+    color: #FFF;
+    margin-top: 10px;
+    font-size: 26px;
+}
+
+
+
+@media only screen and (max-width: 768px){
+    .component-new-disciplina {
+        width: 100%;
+    }
+    
+    .component-new-disciplina div:first-child{
+        width: 70%;
+        text-transform: initial;
+        margin-left: 20px;
+    }
+    
+    .component-new-disciplina div h1 {
+        font-size: 20px;
+    }
+    
+    .component-new-disciplina div button {
+        width: 40%;
+        text-transform: initial;
+        font-size: 16px;
+        
+    }
+    
+    .component-new-disciplina form{
+        width: 90%;
+        padding: 15px;
+        margin-left: 20px;
+    }
+    .component-new-disciplina form select{
+        width: 90%;
+    }
+    .component-new-disciplina form input {
+        width: 90%;
+    }
+
+    .component-new-disciplina form button {
+        width: 60%;
+        font-size: 20px;
+    }
+}
