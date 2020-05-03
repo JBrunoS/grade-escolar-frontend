@@ -124,7 +124,7 @@ export default function Turmas(){
     
     async function handleTurmaEdit(){
         const data = {nome_turma, nivel_id, turno_id};
-
+        console.log(data);
 
         try {
             api.put(`turmas/edit/${turma_id}`, data, {
@@ -207,7 +207,7 @@ export default function Turmas(){
                                 <option key={incidents.id} value={incidents.id}> {incidents.turno} </option>
                         ))}
                     </select>
-                    <button onClick={() => handleTurmaEdit()}>Editar</button>
+                    <button type='button' onClick={() => handleTurmaEdit()}>Editar</button>
                 </form>
             </Modal>
             <div className='component-turma'>
