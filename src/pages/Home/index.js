@@ -25,7 +25,7 @@ export default function Home(){
             console.log({response})
             setTotalProfessores(response.data.count);
         })
-
+        
         api.get('disciplinas/count', { 
             headers: { 
                 Authorization: escola_id
