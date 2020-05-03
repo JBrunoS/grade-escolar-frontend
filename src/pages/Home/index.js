@@ -23,7 +23,7 @@ export default function Home(){
             }
         }).then(response => {
             console.log({response})
-            setTotalProfessores(response.data["count(*)"]);
+            setTotalProfessores(response.data.count);
         })
 
         api.get('disciplinas/count', { 
@@ -31,7 +31,7 @@ export default function Home(){
                 Authorization: escola_id
             }
         }).then(response => {
-            setTotalDisciplinas(response.data["count(*)"])
+            setTotalDisciplinas(response.data.count)
         })
 
         api.get('turmas/count', { 
@@ -39,7 +39,7 @@ export default function Home(){
                 Authorization: escola_id 
             }
         }).then( response => {
-            setTotalTurmas(response.data["count(*)"])
+            setTotalTurmas(response.data.count)
         })
 
         api.get('niveis/count', { 
@@ -47,7 +47,7 @@ export default function Home(){
                 Authorization: escola_id 
             }
         }).then(response => {
-            setTotalNiveis(response.data["count(*)"])
+            setTotalNiveis(response.data.count)
         })
     }, [escola_id])
 
