@@ -50,6 +50,7 @@ export default function DisciplinaRegister(){
         }
 
         console.log(data)
+        console.log(escola_id)
 
         try {
             if (nome_disciplina === '' || carga_horaria === '' || professor_id === '' || nivel_id === '') {

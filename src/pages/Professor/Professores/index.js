@@ -177,7 +177,7 @@ export default function Professor(){
                         >
                             <option value='' >Filtar por Disciplina</option>
                             {disciplinas.map(incidents => (
-                                <option key={incidents.id}>{incidents.nome_disciplina}</option>
+                                <option key={incidents.id} value={incidents.nome_disciplina}>{incidents.nome_disciplina}</option>
                             ))}
                             
                             

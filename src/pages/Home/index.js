@@ -32,6 +32,7 @@ export default function Home(){
     }
 
     useEffect(() => {
+        alert("Seja bem vindo", totalNiveis, totalProfessores);
       loadIncidents()  
     })
 
