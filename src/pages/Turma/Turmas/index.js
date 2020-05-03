@@ -124,7 +124,6 @@ export default function Turmas(){
     
     async function handleTurmaEdit(){
         const data = {nome_turma, nivel_id, turno_id};
-        console.log(data);
 
         try {
             api.put(`turmas/edit/${turma_id}`, data, {
@@ -132,8 +131,9 @@ export default function Turmas(){
                     Authorization: escola_id
                 }
             })
-            setIncidents(turnos.filter(!isNaN))
+
             closeEditModal();
+            setIncidents(incidents.filter(incident => incident.id === !NaN))
             
         } catch (error) {
             
