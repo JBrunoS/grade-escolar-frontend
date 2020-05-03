@@ -206,6 +206,8 @@ export default function Grade(){
                 }
             }).then(response => {
 
+                console.log(response.data);
+
                 dia1.slice()
                 dia2.slice()
                 dia3.slice()
