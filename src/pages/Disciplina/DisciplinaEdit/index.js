@@ -45,8 +45,18 @@ export default function EditDisciplina(){
 
     async function handleEdit(e){
         e.preventDefault();
+
+        const data = { carga_horaria, professor_id};
         
         try{
+            api.put(`disciplinas/${userID}`, data, {
+                headers: {
+                    Authorization: escola_id
+                }
+            }).then(response => {
+                alert('Disciplina alterado com sucesso');
+                history.push('/disciplina')
+            })
 
         } catch (error) {
             alert('Não foi possível alterar informações!');
