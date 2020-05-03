@@ -15,26 +15,40 @@ export default function Home(){
     const [totalTurmas, setTotalTurmas] = useState([]);
     const [totalNiveis, setTotalNiveis] = useState([]);
 
-    async function loadIncidents(){
-        const totalProfessor = await api.get('professor/count', { headers: { Authorization: escola_id }})
-        setTotalProfessores(totalProfessor.data["count(*)"])
-
-        const totalDisciplina = await api.get('disciplinas/count', { headers: { Authorization: escola_id}})
-        setTotalDisciplinas(totalDisciplina.data["count(*)"])
-
-        const totalTurma = await api.get('turmas/count', { headers : { Authorization: escola_id }})
-        setTotalTurmas(totalTurma.data["count(*)"])
-
-        const totalNivel = await api.get('niveis/count', { headers: { Authorization: escola_id }})
-        //console.log({totalNivel})
-        setTotalNiveis(totalNivel.data["count(*)"])
-
-    }
 
     useEffect(() => {
-        alert("Seja bem vindo", totalNiveis, totalProfessores);
-      loadIncidents()  
-    })
+        api.get('professor/count', { 
+            headers: { 
+                Authorization: escola_id 
+            }
+        }).then(response => {
+            setTotalProfessores(response.data["count(*)"]);
+        })
+
+        api.get('disciplinas/count', { 
+            headers: { 
+                Authorization: escola_id
+            }
+        }).then(response => {
+            setTotalDisciplinas(response.data["count(*)"])
+        })
+
+        api.get('turmas/count', { 
+            headers : { 
+                Authorization: escola_id 
+            }
+        }).then( response => {
+            setTotalTurmas(response.data["count(*)"])
+        })
+
+        api.get('niveis/count', { 
+            headers: { 
+                Authorization: escola_id 
+            }
+        }).then(response => {
+            setTotalNiveis(response.data["count(*)"])
+        })
+    }, [escola_id])
 
     return(
         <div className='container-home'>
