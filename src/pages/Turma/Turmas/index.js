@@ -133,7 +133,7 @@ export default function Turmas(){
             })
 
             closeEditModal();
-            setIncidents(incidents.filter(incident => incident.id === !NaN))
+            searchAll();
             
         } catch (error) {
             
