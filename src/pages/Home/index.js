@@ -22,7 +22,7 @@ export default function Home(){
                 Authorization: escola_id 
             }
         }).then(response => {
-            console.log(response.data["count(*)"])
+            console.log({response})
             setTotalProfessores(response.data["count(*)"]);
         })
 
