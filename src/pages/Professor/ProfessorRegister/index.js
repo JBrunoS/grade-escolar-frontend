@@ -47,7 +47,7 @@ export default function ProfessorRegister(){
         
 
         try {
-            if (nome === '' || email === '' || especialidade === '' || telefone === '' || senha === '') {
+            if (nome === '' || email === '' || especialidade === '' || telefone === '' || senha === '' || idx === -1) {
                 alert('Favor Preencher todos os dados');
             }else{
                 
