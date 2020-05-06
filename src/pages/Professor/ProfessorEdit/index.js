@@ -69,7 +69,7 @@ export default function EditProfessor(){
         
 
         try {
-            if (nome === '' || email === '' || especialidade === '' || telefone === '' || senha === '' || idx === -1) {
+            if (nome === '' || email === '' || especialidade === '' || telefone === '' || senha === '') {
                 alert('Favor Preencher todos os dados');
             }else{
 
