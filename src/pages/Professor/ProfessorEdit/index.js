@@ -67,28 +67,32 @@ export default function EditProfessor(){
     async function handleEdit(e){
         e.preventDefault();
         
-        let idx = array.indexOf(true);
-        
-        while(idx !== -1) {
-            dias.push(idx + 1)
-            idx = array.indexOf(true, idx + 1)
-        }
-        
-        const data = {
-            nome,
-            email, 
-            especialidade,
-            telefone,
-            ativo,
-            senha,
-            dias
-        }
-        
 
         try {
             if (nome === '' || email === '' || especialidade === '' || telefone === '' || senha === '' || idx === -1) {
                 alert('Favor Preencher todos os dados');
             }else{
+
+            let idx = array.indexOf(true);
+
+            if(idx === -1){
+                return alert("Favor, selecionar algum dia.")
+            }
+        
+            while(idx !== -1) {
+                dias.push(idx + 1)
+                idx = array.indexOf(true, idx + 1)
+            }
+            
+            const data = {
+                nome,
+                email, 
+                especialidade,
+                telefone,
+                ativo,
+                senha,
+                dias
+            }
                 
             const response = await api.put(`professor/${userID}`, data, {
                 headers:{
