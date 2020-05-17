@@ -18,6 +18,11 @@
     margin-bottom: 40px;
 }
 
+.container-menu .home-menu img{
+    width: 20px;
+    height: 20px;
+}
+
 .container-menu .body-menu {
     display: flex;
     flex-direction: column;
