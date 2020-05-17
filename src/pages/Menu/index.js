@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
 import {FaBars, FaUserTie, FaBook, FaUsers, FaClock, FaLayerGroup, FaTable, FaUser, FaPowerOff} from 'react-icons/fa'
+import { Link, useHistory } from 'react-router-dom'
 
 import './style.css'
-import { Link, useHistory } from 'react-router-dom'
+import logo from '../../assets/logo.png'
 
 export default function Menu(){
     const history = useHistory();
@@ -21,7 +22,7 @@ export default function Menu(){
     return(
         <div className='container-menu'>
             <div className='home-menu'>
-                <Link to='/home'><FaBars size={40} color='#FFFFFF' /></Link>
+                <Link to='/home'><img src={logo} /></Link>
             </div>
             
             <div className='body-menu'>
