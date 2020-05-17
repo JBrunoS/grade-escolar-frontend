@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import {FaBars, FaUserTie, FaBook, FaUsers, FaClock, FaLayerGroup, FaTable, FaUser, FaPowerOff} from 'react-icons/fa'
+import { FaUserTie, FaBook, FaUsers, FaClock, FaLayerGroup, FaTable, FaUser, FaPowerOff } from 'react-icons/fa'
 import { Link, useHistory } from 'react-router-dom'
 
 import './style.css'
