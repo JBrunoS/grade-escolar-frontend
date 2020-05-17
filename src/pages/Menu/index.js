@@ -11,7 +11,7 @@ export default function Menu(){
 
     useEffect(() => {
         if(!escola_nome){
-            history.push('/');
+            //history.push('/');
         }
     });
 

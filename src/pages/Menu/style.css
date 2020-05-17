@@ -19,8 +19,9 @@
 }
 
 .container-menu .home-menu img{
-    width: 20px;
-    height: 20px;
+    width: 90px;
+    height: 90px;
+    box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.452);
 }
 
 .container-menu .body-menu {
