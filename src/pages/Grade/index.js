@@ -206,7 +206,7 @@ export default function Grade(){
                 }
             }).then(response => {
 
-                console.log(response.data.grade);
+                console.log(response.data);
 
                 dia1.slice()
                 dia2.slice()
@@ -214,21 +214,21 @@ export default function Grade(){
                 dia4.slice()
                 dia5.slice()
 
-                for (let i = 0; i < response.data.grade.length; i++) {
-                    if (response.data.grade[i].dia === 1) {
-                        dia1.push(response.data.grade[i])
+                for (let i = 0; i < response.data.length; i++) {
+                    if (response.data[i].dia === 1) {
+                        dia1.push(response.data[i])
                     }
-                    if (response.data.grade[i].dia === 2) {
-                        dia2.push(response.data.grade[i])
+                    if (response.data[i].dia === 2) {
+                        dia2.push(response.data[i])
                     }
-                    if (response.data.grade[i].dia === 3) {
-                        dia3.push(response.data.grade[i])
+                    if (response.data[i].dia === 3) {
+                        dia3.push(response.data[i])
                     }
-                    if (response.data.grade[i].dia === 4) {
-                        dia4.push(response.data.grade[i])
+                    if (response.data[i].dia === 4) {
+                        dia4.push(response.data[i])
                     }
-                    if (response.data.grade[i].dia === 5) {
-                        dia5.push(response.data.grade[i])
+                    if (response.data[i].dia === 5) {
+                        dia5.push(response.data[i])
                     }
                 }
                 setIncidentProfessor1(dia1)
