@@ -214,7 +214,7 @@ export default function Grade(){
                 dia4.slice()
                 dia5.slice()
 
-                for (let i = 0; i < response.data.length; i++) {
+                for (let i = 0; i < response.data.grade.length; i++) {
                     if (response.data.grade[i].dia === 1) {
                         dia1.push(response.data.grade[i])
                     }
