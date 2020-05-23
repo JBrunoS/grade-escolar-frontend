@@ -30,13 +30,112 @@
 
 .content-home div div{
     width: 25%;
-    height: 100px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #FFF;
+    border-radius: 8px;
+    font-size: 25px;
+    padding: 20px;
+    box-shadow: 6px 6px rgba(40, 41, 40, 0.479);
+}
+
+.content-home .content-message{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 12%;
+    margin-left: 20px;
+}
+
+.content-home .content-message p{
+    font-size: 20px;
+    margin: 5px;
+}
+
+.content-home .content-message div{
+    width: 100%;
+    height: auto;
+    display: flex;
+    background-color: #ece8e8;
+    border-radius: 0px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    align-items: center;
+    box-shadow: 0px 0px rgba(0, 0, 0, 0.479);
+    margin: 0px;
+    padding: 10px;
+}
+.content-home .content-message div label{
+    font-size: 20px;
+    margin-right: 15px;
+}
+.content-home .content-message div:first-child input{
+    width: 20px;
+    height: 20px;
+}
+
+.content-home .content-message textarea{
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    resize: vertical;
+}
+
+.content-home .content-message .content-buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+}
+.content-home .content-message .content-buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding: 10px;
+}
+.content-home .content-message .content-buttons button{
+    width: 20%;
+    height: 30px;
+    border-radius: 4px;
+    border-width: 0px;
+    background-color: #337ed4;
+    color: #FFF;
+}
+
+.content-home .content-message .content-buttons input::-webkit-file-upload-button{
+    border-width: 0px;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #979595;
+}
+
+.button-suporte a{
+    position: fixed;
+    left: 85%;
+    top: 85%;
+    width: 180px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #FFF;
-    font-size: 28px;
-    box-shadow: 6px 6px rgba(40, 41, 40, 0.479);
+    background-color: #1ad81c;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button-suporte a p {
+    font-size: 20px;
+    color: #FFF;
+    margin-left: 10px;
 }
 
 .copyright {

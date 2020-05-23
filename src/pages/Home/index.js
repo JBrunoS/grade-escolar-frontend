@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, createRef } from 'react'
+import { FaWhatsapp } from 'react-icons/fa'
 
 import Menu from '../Menu'
 import './style.css'
@@ -14,6 +15,11 @@ export default function Home(){
     const [totalDisciplinas, setTotalDisciplinas] = useState([]);
     const [totalTurmas, setTotalTurmas] = useState([]);
     const [totalNiveis, setTotalNiveis] = useState([]);
+
+    const [professor, setProfessor] = useState(false)
+    const [aluno, setAluno] = useState(false)
+    const [mensagem, setMensagem] = useState('')
+    const file = createRef();
 
 
     useEffect(() => {
@@ -51,6 +57,10 @@ export default function Home(){
         })
     }, [escola_id])
 
+    function handleMessage(){
+        alert(`${professor}, ${aluno}, ${mensagem}, ${file.current.files[0].name}`)
+    }
+
     return(
         <div className='container-home'>
             <Menu />
@@ -75,10 +85,32 @@ export default function Home(){
                     <span>{totalNiveis}</span>
                     </div>
                 </div>
+
+                <div className='content-message'>
+                    <p>Enviar Mensagem</p>
+                    <div>
+                        <input type='checkbox' value={professor} onChange={e => setProfessor(e.target.checked)} />
+                        <label>Professores</label>
+                        <input type='checkbox' value={aluno} onChange={e => setAluno(e.target.checked)} />
+                        <label>Alunos</label>
+
+                    </div>
+                    
+                    <textarea rows={4} maxLength={400} placeholder='Mensagem...' value={mensagem} onChange={ e=> setMensagem(e.target.value)} />
+                    <div className='content-buttons'>
+                        <input type='file' ref={file}/>
+                        <button onClick={handleMessage}>enviar</button>
+                    </div>
+                    
+                </div>
             </div>
             <div class="copyright">
-            <span>Copyright &copy; AjudaNagrade 2020</span>
-          </div>
+                <span>Copyright &copy; AjudaNagrade 2020</span>
+            </div>
+
+            <div className='button-suporte'>
+                <a><FaWhatsapp size={45} color='#FFF' /><p>Suporte</p></a>
+            </div>
         </div>
     )
 }
