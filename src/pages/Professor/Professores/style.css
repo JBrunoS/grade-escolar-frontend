@@ -91,11 +91,8 @@
 }
 .component-professor section{
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 @media only screen and (max-width: 768px){
@@ -142,7 +139,7 @@
     
 }
 .body-professor {
-    width: 70%;
+    width: 95%;
     display: grid;
     grid-template-columns:2fr 1fr 1fr;
     gap: 20px;
