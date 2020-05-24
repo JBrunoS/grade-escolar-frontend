@@ -35,7 +35,7 @@ export default function TurnoRegister(){
 
 
         } catch (error) {
-            alert(error.response.data)
+            alert(error.response.data.error)
         }
     }
 

@@ -35,7 +35,7 @@ export default function NiveisRegister(){
 
 
         } catch (error) {
-            alert('Não foi possível concluir cadastro!');
+            alert(error.response.data.error);
         }
     }
 

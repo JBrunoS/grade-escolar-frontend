@@ -42,16 +42,17 @@
 }
 
 .content-home .content-message{
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 12%;
+    margin-top: 13%;
     margin-left: 20px;
 }
 
-.content-home .content-message p{
-    font-size: 20px;
+.content-home .content-message h2{
     margin: 5px;
+    color: #FFF;
+    text-shadow: 2px 2px 5px rgba(40, 41, 40, 0.479);
 }
 
 .content-home .content-message div{
@@ -78,7 +79,7 @@
 
 .content-home .content-message textarea{
     width: 100%;
-    height: 150px;
+    height: 180px;
     padding: 10px;
     resize: vertical;
 }
@@ -116,26 +117,6 @@
     font-size: 15px;
     cursor: pointer;
     background-color: #979595;
-}
-
-.button-suporte a{
-    position: fixed;
-    left: 85%;
-    top: 85%;
-    width: 180px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #1ad81c;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.button-suporte a p {
-    font-size: 20px;
-    color: #FFF;
-    margin-left: 10px;
 }
 
 .copyright {

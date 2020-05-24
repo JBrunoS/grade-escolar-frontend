@@ -18,6 +18,7 @@ import DisciplinaRegister from '../src/pages/Disciplina/DisciplinaRegister'
 import DisciplinaEdit from '../src/pages/Disciplina/DisciplinaEdit'
 import ForgotPassword from '../src/pages/Password/index'
 import Grade from '../src/pages/Grade/index'
+import Profile from '../src/pages/Perfil/index'
 
 
 
@@ -41,7 +42,9 @@ export default function Routes(){
                 <Route path='/edit/disciplina' component={DisciplinaEdit} />
                 <Route path='/new/turma' component={TurmaRegister} />
                 <Route path='/forgot' component={ForgotPassword} />
-                <Route path='/grade' component={Grade} />
+                <Route path='/grade' component={Grade} />                
+                <Route path='/profile' component={Profile} />                
+
         </Switch>
     </BrowserRouter>
     )

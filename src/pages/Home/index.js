@@ -1,5 +1,4 @@
 import React, { useEffect, useState, createRef } from 'react'
-import { FaWhatsapp } from 'react-icons/fa'
 
 import Menu from '../Menu'
 import './style.css'
@@ -87,7 +86,7 @@ export default function Home(){
                 </div>
 
                 <div className='content-message'>
-                    <p>Enviar Mensagem</p>
+                    <h2>Enviar Mensagem</h2>
                     <div>
                         <input type='checkbox' value={professor} onChange={e => setProfessor(e.target.checked)} />
                         <label>Professores</label>
@@ -106,10 +105,6 @@ export default function Home(){
             </div>
             <div class="copyright">
                 <span>Copyright &copy; AjudaNagrade 2020</span>
-            </div>
-
-            <div className='button-suporte'>
-                <a><FaWhatsapp size={45} color='#FFF' /><p>Suporte</p></a>
             </div>
         </div>
     )
