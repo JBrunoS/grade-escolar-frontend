@@ -7,6 +7,11 @@
     box-sizing: border-box;    
 }
 
+h1 {
+    color: #FFF;
+    text-shadow: 2px 2px 5px rgba(34, 34, 34, 0.479);
+}
+
 body {
     font: 400 14px Roboto, sans-serif;
     background-color: #FFF;

@@ -30,7 +30,6 @@ export default function Register(){
             uf,
             senha
         }
-        console.log({data})
 
         try {
             if (nome === '' || email === '' || telefone === '' || cnpj === '' || endereco === '' || cidade === '' || uf === '' || senha === '') {
@@ -45,7 +44,7 @@ export default function Register(){
 
 
         } catch (error) {
-            alert('Não foi possível concluir cadastro!');
+            alert(error.response.data.error);
         }
     }
     return(

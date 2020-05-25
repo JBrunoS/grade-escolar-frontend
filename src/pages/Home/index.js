@@ -17,8 +17,8 @@ export default function Home(){
 
     const [professor, setProfessor] = useState(false)
     const [aluno, setAluno] = useState(false)
-    const [mensagem, setMensagem] = useState('')
-    const file = createRef();
+    const [descricao, setDescricao] = useState('')
+    const files = createRef();
 
 
     useEffect(() => {
@@ -27,7 +27,6 @@ export default function Home(){
                 Authorization: escola_id 
             }
         }).then(response => {
-            console.log({response})
             setTotalProfessores(response.data.count);
         })
         
@@ -56,8 +55,21 @@ export default function Home(){
         })
     }, [escola_id])
 
-    function handleMessage(){
-        alert(`${professor}, ${aluno}, ${mensagem}, ${file.current.files[0].name}`)
+    async function handleMessage(){
+        // alert(`${professor}, ${aluno}, ${descricao}, ${files.current.files[0].name}`)
+
+        const file = files.current.files[0];
+
+        const data = {descricao, professor, aluno, file }
+
+        try {
+            await api.post(`message/${escola_id}`, data)
+
+            alert('Passou')
+        } catch (error) {
+            alert('Não deu certo')
+        }
+
     }
 
     return(
@@ -95,15 +107,15 @@ export default function Home(){
 
                     </div>
                     
-                    <textarea rows={4} maxLength={400} placeholder='Mensagem...' value={mensagem} onChange={ e=> setMensagem(e.target.value)} />
+                    <textarea rows={4} maxLength={400} placeholder='Mensagem...' value={descricao} onChange={ e=> setDescricao(e.target.value)} />
                     <div className='content-buttons'>
-                        <input type='file' ref={file}/>
+                        <input type='file' ref={files}/>
                         <button onClick={handleMessage}>enviar</button>
                     </div>
                     
                 </div>
             </div>
-            <div class="copyright">
+            <div className="copyright">
                 <span>Copyright &copy; AjudaNagrade 2020</span>
             </div>
         </div>
