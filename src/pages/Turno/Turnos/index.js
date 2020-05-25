@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { FaPlus, FaEdit, FaTrashAlt } from 'react-icons/fa'
+import { FaPlus, FaEdit } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import Modal from 'react-modal'
 

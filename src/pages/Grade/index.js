@@ -49,15 +49,8 @@ export default function Grade(){
     const [professor_id, setProfessorId] = useState('')
     const [turma_id, setTurmaId] = useState('')
     const [dia, setDia] = useState('')
-    const [horario, setHorario] = useState('')
-
-
-    const [minimo, setMinino] = useState(false)
-    const [maximo, setMaximo] = useState(false)
-    
-    
-    //const [carga_horaria, setCargaHoraria] = useState('')
-    const hora = [1, 2, 3, 4];
+    const [horario_inicio, setHorarioInicio] = useState('')
+    const [horario_fim, setHorarioFim] = useState('')
     
     
     const escola_id = localStorage.getItem('escola_id');
@@ -245,14 +238,7 @@ export default function Grade(){
 
     async function handleSubmit(e){
         e.preventDefault();
-        
-        if(turno_id == 1){
-            setMinino(true)
-            setMaximo(true)
-        }   else {
-            setMinino(false)
-            setMaximo(false)
-        }
+
 
         try {
             if (nivel_id === '' || turma_id === '' || turno_id === '') {
@@ -323,11 +309,12 @@ export default function Grade(){
             nivel_id,
             turno_id,
             dia,
-            horario
+            horario_inicio,
+            horario_fim
          } 
         
          try {
-            if (disciplina_id === '' || professor_id === '' || turma_id === '' || turno_id === '' || nivel_id === '' || dia === '' || horario === '') {
+            if (disciplina_id === '' || professor_id === '' || turma_id === '' || turno_id === '' || nivel_id === '' || dia === '' || horario_inicio === '' || horario_fim === '') {
                 alert('Todos os campos são necessários');
                 
             }else{
@@ -395,7 +382,7 @@ export default function Grade(){
                             <span>{incident.nome}</span>
                             <span>{incident.nome_disciplina}</span>
                             <span>{incident.nome_turma}</span>
-                            <span>{incident.horario}</span>
+                            <span>{incident.horario_inicio} - {incident.horario_fim}</span>
                         </div>
                     ))}
 
@@ -409,7 +396,7 @@ export default function Grade(){
                             <span>{incident.nome}</span>
                             <span>{incident.nome_disciplina}</span>
                             <span>{incident.nome_turma}</span>
-                            <span>{incident.horario}</span>
+                            <span>{incident.horario_inicio} - {incident.horario_fim}</span>
                         </div>
                     ))}
             </div>
@@ -422,7 +409,7 @@ export default function Grade(){
                             <span>{incident.nome}</span>
                             <span>{incident.nome_disciplina}</span>
                             <span>{incident.nome_turma}</span>
-                            <span>{incident.horario}</span>
+                            <span>{incident.horario_inicio} - {incident.horario_fim}</span>
                         </div>
                     ))}
             </div>
@@ -435,7 +422,7 @@ export default function Grade(){
                             <span>{incident.nome}</span>
                             <span>{incident.nome_disciplina}</span>
                             <span>{incident.nome_turma}</span>
-                            <span>{incident.horario}</span>
+                            <span>{incident.horario_inicio} - {incident.horario_fim}</span>
                         </div>
                     ))}
             </div>
@@ -448,7 +435,7 @@ export default function Grade(){
                             <span>{incident.nome}</span>
                             <span>{incident.nome_disciplina}</span>
                             <span>{incident.nome_turma}</span>
-                            <span>{incident.horario}</span>
+                            <span>{incident.horario_inicio} - {incident.horario_fim}</span>
                         </div>
                     ))}
             </div>
@@ -485,20 +472,27 @@ export default function Grade(){
                     <option key={incident.id} value={incident.id} > {incident.nome} </option>
                 ))}
            </select>
-            <div>
-                <select
-                    value={dia}
-                    onChange={e => setDia(e.target.value)}
-                >   <option value='' disabled></option>
-                    <option value={1} >Segunda-feira</option>
-                    <option value={2} >Terça-feira</option>
-                    <option value={3} >Quarta-feira</option>
-                    <option value={4} >Quinta-feira</option>
-                    <option value={5} >Sexta-feira</option>
-                </select>
 
-               <input type='time' min="07:00" max="17:00" value={horario} onChange={e => setHorario(e.target.value)} />
-        
+            <select
+                value={dia}
+                onChange={e => setDia(e.target.value)}
+            >   <option value='' disabled></option>
+                <option value={1} >Segunda-feira</option>
+                <option value={2} >Terça-feira</option>
+                <option value={3} >Quarta-feira</option>
+                <option value={4} >Quinta-feira</option>
+                <option value={5} >Sexta-feira</option>
+            </select>
+
+            <div>
+                <div>
+                    <label>Hora Início</label>
+                    <input type='time' min="07:00" max="17:00" value={horario_inicio} onChange={e => setHorarioInicio(e.target.value)} />
+                </div>
+                <div>
+                    <label>Hora Fim</label>
+                    <input type='time' min="07:00" max="17:00" value={horario_fim} onChange={e => setHorarioFim(e.target.value)} />
+                </div>
             </div>
             <button>Adicionar</button>   
         </form>
@@ -579,7 +573,7 @@ export default function Grade(){
                             <div key={incident.id}>
                                 <span>{incident.nome_disciplina}</span>
                                 <span>{incident.nome}</span>
-                                <span>{incident.horario}</span>
+                                <span>{incident.horario_inicio} - {incident.horario_fim}</span>
                                 <Link onClick={() => handleDelete(incident.id)}><FaTrashAlt size={14} color='rgb(208, 63, 58)' /></Link>
                             </div>
                         ))}
@@ -589,7 +583,7 @@ export default function Grade(){
                                 <div key={incident.id}>
                                     <span>{incident.nome_disciplina}</span>
                                     <span>{incident.nome}</span>
-                                    <span>{incident.horario}</span>
+                                    <span>{incident.horario_inicio} - {incident.horario_fim}</span>
                                     <Link onClick={() => handleDelete(incident.id)}><FaTrashAlt size={14} color='rgb(208, 63, 58)' /></Link>
                                 </div>
                             ))}
@@ -599,7 +593,7 @@ export default function Grade(){
                                 <div key={incident.id}>
                                     <span>{incident.nome_disciplina}</span>
                                     <span>{incident.nome}</span>
-                                    <span>{incident.horario}</span>
+                                    <span>{incident.horario_inicio} - {incident.horario_fim}</span>
                                     <Link onClick={() => handleDelete(incident.id)}><FaTrashAlt size={14} color='rgb(208, 63, 58)' /></Link>
                                 </div>
                             ))}
@@ -609,7 +603,7 @@ export default function Grade(){
                                 <div key={incident.id}>
                                     <span>{incident.nome_disciplina}</span>
                                     <span>{incident.nome}</span>
-                                    <span>{incident.horario}</span>
+                                    <span>{incident.horario_inicio} - {incident.horario_fim}</span>
                                     <Link onClick={() => handleDelete(incident.id)}><FaTrashAlt size={14} color='rgb(208, 63, 58)' /></Link>
                                 </div>
                             ))}
@@ -619,7 +613,7 @@ export default function Grade(){
                                 <div key={incident.id}>
                                     <span>{incident.nome_disciplina}</span>
                                     <span>{incident.nome}</span>
-                                    <span>{incident.horario}</span>
+                                    <span>{incident.horario_inicio} - {incident.horario_fim}</span>
                                     <Link onClick={() => handleDelete(incident.id)}><FaTrashAlt size={14} color='rgb(208, 63, 58)' /></Link>
                                 </div>
                             ))}

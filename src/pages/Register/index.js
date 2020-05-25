@@ -36,7 +36,7 @@ export default function Register(){
                 alert('Favor Preencher todos os dados');
             }else{
                 
-            const response = await api.post('new/escola', data)
+            await api.post('new/escola', data)
 
             alert(`Cadastro realizado com sucesso`)
             history.push('/');

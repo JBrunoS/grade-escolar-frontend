@@ -10,6 +10,8 @@
 
 .form-modal-register h1{
     margin-bottom: 5px;
+    color: #000000;
+    text-shadow: none;
 }
 
 .form-modal-register input{
@@ -27,16 +29,30 @@
     display: flex;
     justify-content: center;
 }
-
 .form-modal-register select{
     width: 80%;
     margin-top: 5px;
 }
-.form-modal-register input:last-child{
+
+.form-modal-register div div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    margin: 2px;
+}
+
+.form-modal-register div div input{
+    width: 100%;
+    align-self: center;
     border-radius: 8px;
-    width: 40%;
-    margin-top: 5px;
-    margin-left: 10px;
+}
+
+.form-modal-register div div label{
+    font: 400 18px Roboto, sans-serif;
+    align-self: flex-start;
 }
 
 .form-modal-register button {
@@ -69,7 +85,7 @@
 }
 
 .grade-professor-horario div:first-child{
-    background-color: rgb(32, 165, 80);
+    background-color: rgba(32, 165, 80, 1);
 }
 
 .grade-professor-horario div{
@@ -85,6 +101,7 @@
 
 .grade-professor-horario div span{
     font-weight: 600;
+    font-size: 12px;
     color: #FFFFFF;
 }
 

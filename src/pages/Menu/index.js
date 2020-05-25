@@ -22,7 +22,7 @@ export default function Menu(){
     return(
         <div className='container-menu'>
             <div className='home-menu'>
-                <Link to='/home'><img src={logo} /></Link>
+                <Link to='/home'><img src={logo} alt='Ajuda na grade'/></Link>
             </div>
             
             <div className='body-menu'>
