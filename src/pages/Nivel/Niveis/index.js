@@ -17,7 +17,7 @@ export default function Niveis(){
 
     const escola_id = localStorage.getItem('escola_id')
 
-    const [modalRegisterOpen,setRegisterIsOpen] = useState(false);
+    const [modalEditOpen,setEditIsOpen] = useState(false);
 
     const registerStyles = {
         content : {
@@ -33,39 +33,51 @@ export default function Niveis(){
       };
 
 
-      function openRegisterModal(id, nome) {
+      function openEditModal(id, nome) {
         setNivelId(id)
         setNomeNivel(nome);
-        setRegisterIsOpen(true);
+        setEditIsOpen(true);
      }
     
-     function closeRegisterModal(){
+     function closeEditModal(){
        
-       setRegisterIsOpen(false);
+       setEditIsOpen(false);
      }
-
-     function handleEditNivel(){
+     
+     async function searchAll(){
+        try {
+           await api.get('niveis', {
+               headers: {
+                   Authorization: escola_id,
+               }
+           }).then(response => {
+               setNiveis(response.data);
+           })
+        } catch (error) {
+           alert(error.response.data.error)
+        }
+    }
+     async function handleEditNivel(){
 
         const data = {nome_nivel};
 
         try {
-            api.put(`niveis/${nivel_id}`, data, {
+           await api.put(`niveis/${nivel_id}`, data, {
                 headers: {
                     Authorization: escola_id
                 }
             })
-            setNiveis(niveis.filter(!isNaN))
-            closeRegisterModal();
+            closeEditModal();
+            searchAll();
             
         } catch (error) {
-            
+            alert(error)
         }
-
-         
      }
 
+
     useEffect(() => {
-        api.get('niveis', {
+         api.get('niveis', {
             headers: {
                 Authorization: escola_id,
             }
@@ -78,17 +90,17 @@ export default function Niveis(){
     return(
         <div className='container-nivel'>
             <Modal
-            isOpen={modalRegisterOpen}
-            onRequestClose={closeRegisterModal}
+            isOpen={modalEditOpen}
+            onRequestClose={closeEditModal}
             style={registerStyles}
-            contentLabel="Register"
+            contentLabel="Edit"
             >
     
                 <form className='form-modal-edit'>
                     <h3>Editar nome do nível</h3>
                 
                 <input value={nome_nivel} onChange={e => setNomeNivel(e.target.value)}></input>
-                    <button onClick={() => handleEditNivel()}>Editar</button>   
+                    <button type='button' onClick={() => handleEditNivel()}>Editar</button>   
                 </form>
             </Modal>
             <Menu />
@@ -103,7 +115,7 @@ export default function Niveis(){
                     <div className='body-nivel' key={incidents.id}>
                         <span>nível: {incidents.nome_nivel}</span>
                         <span>Código: {incidents.id} </span>
-                        <Link onClick={() => openRegisterModal(incidents.id, incidents.nome_nivel)} ><FaEdit size={25} color='#FCA14D' /> </Link>
+                        <Link onClick={() => openEditModal(incidents.id, incidents.nome_nivel)} ><FaEdit size={25} color='#FCA14D' /> </Link>
                 </div>
                 ))}
                 
