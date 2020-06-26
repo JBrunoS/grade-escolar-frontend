@@ -19,6 +19,7 @@ import DisciplinaEdit from '../src/pages/Disciplina/DisciplinaEdit'
 import ForgotPassword from '../src/pages/Password/index'
 import Grade from '../src/pages/Grade/index'
 import Profile from '../src/pages/Perfil/index'
+import LandPage from '../src/pages/LandPage'
 
 
 
@@ -26,7 +27,9 @@ export default function Routes(){
     return(
     <BrowserRouter>
         <Switch>
-        <Route path='/' exact component={Login}/>
+        <Route path='/' exact component={LandPage}/>
+        
+                <Route path='/login' component={Login} />
                 <Route path='/register' component={Register} />
                 <Route path='/professor' component={Professor} />
                 <Route path='/disciplina' component={Disciplina} />

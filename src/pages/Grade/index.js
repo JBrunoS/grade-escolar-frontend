@@ -238,7 +238,6 @@ export default function Grade(){
 
     async function handleSubmit(e){
         e.preventDefault();
-        alert("Passei aqui")
 
         try {
             if (nivel_id === '' || turma_id === '' || turno_id === '') {
@@ -292,8 +291,6 @@ export default function Grade(){
                 setQuarta(dia3)
                 setQuinta(dia4)
                 setSexta(dia5)
-
-                console.log(segunda)
                 
                 
         } catch (error) {

@@ -1,0 +1,426 @@
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.container .header{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: rgb(250, 250, 250);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25); 
+}
+
+.container .header div:first-child a{
+    font-size: 22px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.container .header div + div a{
+    font-size: 20px;
+    text-decoration: none;
+    margin-right: 40px;
+    color: #000000;
+}
+
+.container .header button{
+    margin-right: 20px;
+    width: 120px;
+    height: 40px;
+    border-radius: 8px;
+    border-width: 0px;
+    background-color: #337ed4;
+    color: #ffffff;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+.container .header button:hover {
+    background-color: #d35757;
+}
+
+
+.container .body div{
+    width: 100%;
+    height: 650px;
+    margin: 15px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.container .body div:last-child {
+    height: 450px;
+}
+
+
+.container .body .content-1 .first {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+.container .body .content-1 .first img{
+    width: 550px;
+    height: 400px;
+    margin-right: 50px;
+}
+.container .body .content-1 .first div {
+    width: 550px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .body .content-1 .first div p{
+    font-size: 45px;
+    font-weight: 600;
+    color: #337ed4;
+}
+
+.container .body .content-1 .first div p + p{
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: none;
+    margin-top: 20px;
+    text-align: justify;
+    color: #8a8888;
+}
+
+@media only screen and (max-width: 768px){
+    .container .header {
+        padding: 20px;
+        width: 100%;
+    }
+    .container .header div:first-child a{
+        font-size: 18px;
+    }
+    
+    .container .header div + div a{
+        visibility: hidden;
+        font-size: 8px;
+        margin-right: 10px;
+    }
+    
+    .container .header button{
+        width: 60px;
+        height: 30px;
+        font-size: 15px;
+        margin-right: 0px;
+    }
+    .container .body .content-1 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .container .body .content-1 .first{
+        flex-direction: column;
+    }
+    .container .body .content-1 .first img{
+        margin-right: 0px;
+        width: 100%;
+        height: auto;
+    }
+
+    .container .body .content-1 .first div{
+        width: 100%;
+    }
+
+    .container .body .content-1 .first div p{
+        font-size: 25px;
+    }
+    .container .body .content-1 .first div p + p{
+        font-size: 20px;
+    }
+}
+
+
+.container .body .content-2 {
+    
+    background-image: url('../../assets/picture2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container .body .content-2 p{
+    font-size: 50px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+.container .body .content-2 button {
+    width: 350px;
+    height: 50px;
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 40px;
+    border-width: 0px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+    background-color: #33d44e;
+    color: #ffffff;
+}
+
+.container .body .content-2 button:hover {
+    background-color: #d35757;
+}
+
+@media only screen and (max-width: 768px){
+    .container .body .content-2 {
+        background-image: url('../../assets/picture4.jpg');
+        font-size: 10px;
+    }
+    .container .body .content-2 p{
+        font-size: 35px;
+        text-align: right;
+    }
+    .container .body .content-2 button{
+        width: 60%;
+    } 
+}
+
+.container .body .content-3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.container .body .content-3 div {
+    width: 550px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    font-weight: 700;
+    color: #337ed4;
+}
+
+
+.container .body .content-3 div p + p {
+    font-size: 25px;
+    font-weight: 400;
+    margin-top: 20px;
+    color: #8a8888;
+}
+
+.container .body .content-3 img {
+    width: 650px;
+    height: 400px;
+}
+
+@media only screen and (max-width: 768px){
+    .container .body .content-3 {
+        flex-direction: column;
+        width: 100%;
+    }
+    .container .body .content-3 div {
+        width: 100%;
+        height: auto;
+        font-size: 25px;
+    }
+    
+    
+    .container .body .content-3 div p + p {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .container .body .content-3 img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.container .body .content-4 {
+    background-image: url('../../assets/picture4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.container .body .content-4 p{
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 100px;
+    text-align: right;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.75);
+}
+
+@media only screen and (max-width: 720px){
+    .container .body .content-4{
+        width: 100%;
+    }
+
+    .container .body .content-4 p{
+        font-size: 30px;
+    }
+}
+
+.container .body .content-5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .body .content-5 p {
+    font-size: 50px;
+    font-weight: 700;
+    color: #337ed4;
+}
+
+.container .body .content-5 button {
+    width: 25%;
+    height: 50px;
+    margin-top: 50px;
+    border-width: 0px;
+    border-radius: 25px;
+    background-color: #337ed4;
+    font-size: 25px;
+    color: #ffffff;
+}
+
+.container .body .content-5 button:hover {
+    background-color: #d35757;
+}
+
+@media only screen and (max-width: 768px){
+    .container .body .content-5 {
+        width: 100%;
+    }
+    
+    .container .body .content-5 p {
+        font-size: 35px;
+    }
+    
+    .container .body .content-5 button {
+        width: 70%;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+
+.container .footer {
+    width: 100%;
+    height: 160px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .footer div:first-child {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
+}
+
+
+.container .footer div:first-child div:first-child a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.container .footer div:first-child div + div{
+    width: 50%;
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #ffffff;
+}
+
+.container .footer div:first-child div + div span{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.container .footer div:first-child div + div p{
+    font-size: 15px;
+}
+
+.container .footer div:last-child{
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+@media only screen and (max-width: 768px){
+    
+    .container .footer {
+        width: 100%;
+        height: auto;
+        
+    }
+    
+    .container .footer div:first-child {
+        
+        flex-direction: column;
+        align-items: flex-start;
+        padding-inline-start: 0px;
+        
+    }
+    
+    
+    .container .footer div:first-child div:first-child a{
+        margin-left: 10px;
+        font-size: 22px;
+        margin-top: 10px;
+        
+    }
+    
+    .container .footer div:first-child div + div{
+        width: 100%;
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .container .footer div:first-child div + div span{
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    
+    .container .footer div:first-child div + div p{
+        font-size: 14px;
+    }
+    
+    .container .footer div:last-child{
+        margin-bottom: 15px;
+        color: #ffffff;
+    }
+}

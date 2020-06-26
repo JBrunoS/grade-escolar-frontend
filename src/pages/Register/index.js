@@ -99,7 +99,7 @@ export default function Register(){
                     />
                     <button type='submit'>cadastrar</button>
                 </form>
-                <Link to='/'>
+                <Link to='/login'>
                     <FaArrowLeft size={16} color='#FFF' />
                     Já tenho cadastro
                 </Link>

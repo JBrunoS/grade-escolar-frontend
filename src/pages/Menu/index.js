@@ -11,13 +11,13 @@ export default function Menu(){
 
     useEffect(() => {
         if(!escola_nome){
-            history.push('/');
+            history.push('/login');
         }
     });
 
     function handleLogout(){
         localStorage.clear();
-        history.push('/')
+        history.push('/login')
     }
     return(
         <div className='container-menu'>

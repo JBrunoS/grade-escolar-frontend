@@ -16,7 +16,7 @@ body {
     font: 400 14px Roboto, sans-serif;
     background-color: #FFF;
     -webkit-font-smoothing: antialiased;
-    background-image: url('./assets/background.jpg');
+    /* background-image: url('./assets/background.jpg'); */
     
 }
 
