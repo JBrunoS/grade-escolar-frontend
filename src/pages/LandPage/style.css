@@ -190,6 +190,7 @@
 @media only screen and (max-width: 768px){
     .container .body .content-2 {
         background-image: url('../../assets/picture4.jpg');
+        background-size: 100% auto;
         font-size: 10px;
     }
     .container .body .content-2 p{
@@ -279,6 +280,7 @@
 @media only screen and (max-width: 720px){
     .container .body .content-4{
         width: 100%;
+        background-size: 100% auto;
     }
 
     .container .body .content-4 p{
