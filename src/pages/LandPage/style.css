@@ -189,7 +189,6 @@
 
 @media only screen and (max-width: 768px){
     .container .body .content-2 {
-        background-image: url('../../assets/picture4.jpg');
         background-size: 100% auto;
         background-attachment: unset;
         font-size: 10px;
