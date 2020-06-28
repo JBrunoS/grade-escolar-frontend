@@ -39,7 +39,7 @@ export default function Register(){
             await api.post('new/escola', data)
 
             alert(`Cadastro realizado com sucesso`)
-            history.push('/');
+            history.push('/login');
             }
 
 
