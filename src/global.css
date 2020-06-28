@@ -8,15 +8,14 @@
 }
 
 h1 {
-    color: #FFF;
+    color: #000000;
     text-shadow: 2px 2px 5px rgba(34, 34, 34, 0.479);
 }
 
 body {
     font: 400 14px Roboto, sans-serif;
-    background-color: #FFF;
+    background-color: #ecedee;
     -webkit-font-smoothing: antialiased;
-    background-image: url('./assets/background.jpg');
     
 }
 
