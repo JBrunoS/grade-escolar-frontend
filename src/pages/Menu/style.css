@@ -78,35 +78,46 @@
     font-size: 45px;
 }
 
+.button-float button{
+    visibility: hidden;
+    position: absolute;
+    left: 190px;
+    top: 10px;
+    border-width: 0px;
+    background-color: transparent;
+}
+
 @media only screen and (max-width:760px){
+    .button-float button{
+        visibility: visible;
+    }
     .container-menu {
-            padding:0 20px 0 0;
-            transition: all 0.5s ease;
+            padding:0 5px 0 0;
+            transition: all 0.5s ease-in;
             font-size:1.2em;
             height:100%;
-            
-            width:200px; 
+            width:180px; 
             position:fixed;
             top:0;
             left:-180px;
             }
-        .container-menu:before {
-            z-index:200;
-            font-size:2em;
-            color:white;
-            position:fixed;
-            left:0px;
-            top:45px;
-            }
-        .container-menu:hover:before, .container-menu:focus:before {
-        left:-500px
-            }
-        .container-menu:hover, .container-menu:focus,  .container-menu:active  {
-            -moz-transform: translate(180px, 0);
-                -webkit-transform: translate(180px, 0);
-                    -o-transform: translate(180px, 0);
+    .container-menu:before {
+        z-index: 0;
+        font-size:2em;
+        color:white;
+        position:fixed;
+        left:0px;
+        top:45px;
+    }
+    .container-menu:hover:before, .container-menu:focus:before {
+        left:-10px
+    }
+    .container-menu:hover, .container-menu:focus,  .container-menu:active  {
+            -moz-transform: translate(100px, 0);
+                -webkit-transform: translate(100px, 0);
+                    -o-transform: translate(100px, 0);
                         transform: translate(180px, 0);
             padding-right:0;
-            }	
+    }	
 }
 

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { FaUserTie, FaBook, FaUsers, FaClock, FaLayerGroup, FaTable, FaUser, FaPowerOff } from 'react-icons/fa'
+import { FaUserTie, FaBook, FaUsers, FaClock, FaLayerGroup, FaTable, FaUser, FaPowerOff, FaBars } from 'react-icons/fa'
 import { Link, useHistory } from 'react-router-dom'
 
 import './style.css'
@@ -11,7 +11,7 @@ export default function Menu(){
 
     useEffect(() => {
         if(!escola_nome){
-            //history.push('/login');
+            history.push('/login');
         }
     });
 
@@ -44,6 +44,10 @@ export default function Menu(){
             <div className='footer-menu'>
                 <Link to='/profile'><FaUser size={20} color='#FFFFFF' /> {escola_nome}</Link>
                 <button onClick={handleLogout}> <FaPowerOff size={25} color='#EEE' /> </button>
+            </div>
+
+            <div className='button-float'>
+                <button><FaBars size={30} color='#337ed4' /></button> 
             </div>
         </div>
     )

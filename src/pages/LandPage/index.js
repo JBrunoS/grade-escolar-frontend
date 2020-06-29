@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { useHistory } from 'react-router-dom'
+import  { FaBars } from 'react-icons/fa'
 
 import './style.css'
 import picture1 from '../../assets/picture1.jpg'
@@ -12,9 +13,16 @@ export default function LandPage(){
     const [class3, setClass3 ] = useState('hidden')
     const [class4, setClass4 ] = useState('hidden')
     const [class5, setClass5 ] = useState('hidden')
+    const [classHeader, setClassHeader] = useState('header')
 
     function scroll(){
         var width = window.screen.width;
+
+        if (document.documentElement.scrollTop > 50) {
+            setClassHeader('small-header');
+        }else{
+            setClassHeader('header')
+        }
 
         if (width > 400 && document.documentElement.scrollTop > 300) {
             setClass1('show')
@@ -49,9 +57,6 @@ export default function LandPage(){
         if (width < 400 && document.documentElement.scrollTop >= 1493) {
             setClass5('show')
         }
-        
-
-        console.log(document.documentElement.scrollTop);
     }
 
     useEffect(() => {
@@ -68,17 +73,21 @@ export default function LandPage(){
     
     return(
         <div className='container'>
-            <div className='header'>
+            <div className={classHeader}>
                 <div>
                     <a href='http://localhost:3000'>Ajuda na Grade</a>
                 </div>
-                <div>
-                    <a href="http://localhost:3000">Quem somos</a>
-                    <a href="http://localhost:3000">Contato</a>
+                
+                <div className="dropdown">
+                    <button className="dropbtn"><FaBars size={25} color='#337ed4' /></button>
+                    <div className="dropdown-content">
+                        <a href="#">Login</a>
+                        <a href="#">Quem somos</a>
+                        <a href="#">Funcionalidades</a>
+                        <a href="#">Contato</a>
+                    </div>
                 </div>
-                <div>
-                    <button type='button' onClick={handleLogin}>Iniciar</button>
-                </div>
+                
             </div>
             <div className='body'>
                 <div className='content-1 show'>
