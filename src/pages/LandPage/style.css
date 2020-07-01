@@ -87,6 +87,7 @@
     display: block;
   }
 
+
   @media only screen and (max-width: 768px){
     .header, .small-header {
         padding: 20px;
@@ -116,6 +117,7 @@
     margin: 15px 0px;
     display: flex;
     align-items: center;
+    
 }
 
 .container .body div:last-child {
@@ -476,22 +478,22 @@
 
 .show {
     position: relative;
-    left: -30em;
+    bottom: -5em;
     -webkit-animation: slide-in 2s forwards;
     animation: slide-in 2s forwards;
  }
 
  .show-text{
      position: relative;
-     left: -40em;
+     bottom: -8em;
      -webkit-animation: slide-in 3s forwards;
      animation: slide-in 3s forwards;
  }
  @-webkit-keyframes slide-in {
-   100% { left: 0 }
+   100% { bottom: 0 }
  }
  @keyframes slide-in {
-   100% { left: 0 }
+   100% { bottom: 0 }
  }
 
 

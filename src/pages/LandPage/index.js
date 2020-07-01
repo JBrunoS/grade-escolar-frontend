@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 import  { FaBars } from 'react-icons/fa'
 
 import './style.css'
@@ -63,10 +63,6 @@ export default function LandPage(){
      window.onscroll = () => scroll();
     });
 
-    function handleLogin(){
-        history.push('login');
-    }
-
     function handleRegister(){
         history.push('register');
     }
@@ -75,16 +71,16 @@ export default function LandPage(){
         <div className='container'>
             <div className={classHeader}>
                 <div>
-                    <a href='http://localhost:3000'>Ajuda na Grade</a>
+                    <Link to='/'>Ajuda na Grade</Link>
                 </div>
                 
                 <div className="dropdown">
                     <button className="dropbtn"><FaBars size={25} color='#337ed4' /></button>
                     <div className="dropdown-content">
-                        <a href="#">Login</a>
-                        <a href="#">Quem somos</a>
-                        <a href="#">Funcionalidades</a>
-                        <a href="#">Contato</a>
+                        <Link to="/login">Login</Link>
+                        <Link to="/">Quem somos</Link>
+                        <Link to="/">Funcionalidades</Link>
+                        <Link to="/contact">Contato</Link>
                     </div>
                 </div>
                 
@@ -128,8 +124,8 @@ export default function LandPage(){
                     </div>
                     <div>
                         <span>Contato</span>
-                        <p>Email: joaobruno.sousa@yahoo.com</p>
-                        <p>Telefone: (85) 992879779</p>
+                        <p>Email: joaobruno.sousa@outlook.com</p>
+                        <p>Telefone: (85) 99287-9779</p>
                     </div>
                 </div>
                 <div>

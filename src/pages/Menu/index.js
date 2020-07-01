@@ -3,7 +3,7 @@ import { FaUserTie, FaBook, FaUsers, FaClock, FaLayerGroup, FaTable, FaUser, FaP
 import { Link, useHistory } from 'react-router-dom'
 
 import './style.css'
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo.jpg'
 
 export default function Menu(){
     const history = useHistory();
