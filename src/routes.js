@@ -20,6 +20,8 @@ import ForgotPassword from '../src/pages/Password/index'
 import Grade from '../src/pages/Grade/index'
 import Profile from '../src/pages/Perfil/index'
 import LandPage from '../src/pages/LandPage'
+import About from '../src/pages/About'
+import Contact from '../src/pages/Contact'
 
 
 
@@ -47,6 +49,8 @@ export default function Routes(){
                 <Route path='/forgot' component={ForgotPassword} />
                 <Route path='/grade' component={Grade} />                
                 <Route path='/profile' component={Profile} />                
+                <Route path='/about' component={About} />                
+                <Route path='/contact' component={Contact} />
 
         </Switch>
     </BrowserRouter>
