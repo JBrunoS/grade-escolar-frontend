@@ -54,6 +54,7 @@
     border-width: 0;
     
     background-color: rgb(32, 165, 80);
+    border-radius: 8px;
     color: #FFFFFF;
     
     text-decoration: none;
@@ -108,9 +109,9 @@
     margin-top: 10px;
     text-transform: uppercase;
     border-radius: 8px;
-    background-color: #F2F4EE;
+    background-color: #ffffff;
     padding: 10px;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 0px #337ed4;
 }
 
 .body-turma span{

@@ -51,8 +51,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 10px;
-    
-    background: #F2F4EE;
+    background: #f1f1f1;
     box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
     border-radius: 12px;
     padding: 30px;
@@ -66,7 +65,7 @@
     border-radius: 8px;
     padding: 10px;
     border-width: 0;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 0px #337ed4;
     background-color: #FFF;
 }
 
@@ -89,7 +88,8 @@
     height: 38px;
     border-width: 0;
     border-radius: 8px;
-    background-color: #395B7E;
+    background-color: #337ed4;
+    box-shadow: 0px 4px 0px #255b99;
     color: #FFF;
     margin-top: 10px;
     font-size: 26px;
@@ -108,9 +108,7 @@
     align-items: center;
     justify-content: space-between;
     padding-left: 20px;
-    background-color: #ebebe4;
     border-radius: 8px;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
 }
 
 .component-new-professor .buttonGroup label{
@@ -120,7 +118,6 @@
 
 .component-new-professor .buttonGroup input{
     width: 30px;
-    background-color: #395B7E;
     box-shadow: 0px 0px 0px;
 }
 

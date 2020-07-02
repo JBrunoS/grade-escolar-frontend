@@ -18,7 +18,8 @@
 .content-home h1 {
     margin-left: 20px;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    font-size: 38px;
 }
 
 .content-home div {
@@ -38,7 +39,7 @@
     border-radius: 8px;
     font-size: 25px;
     padding: 20px;
-    box-shadow: 6px 6px rgba(40, 41, 40, 0.479);
+    box-shadow: 0px 4px 0px #337ed4b9;
 }
 
 .content-home .content-message{
@@ -51,15 +52,14 @@
 
 .content-home .content-message h2{
     margin: 5px;
-    color: #FFF;
-    text-shadow: 2px 2px 5px rgba(40, 41, 40, 0.479);
+    color: rgb(68, 67, 67);
 }
 
 .content-home .content-message div{
     width: 100%;
     height: auto;
     display: flex;
-    background-color: #ece8e8;
+    background-color: #adacac81;
     border-radius: 0px;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
@@ -107,6 +107,7 @@
     border-radius: 4px;
     border-width: 0px;
     background-color: #337ed4;
+    box-shadow: 0px 4px 0px #255b99;
     color: #FFF;
 }
 
@@ -116,14 +117,15 @@
     padding: 5px;
     font-size: 15px;
     cursor: pointer;
-    background-color: #979595;
+    background-color: #337ed4;
+    color: #FFF;
 }
 
 .copyright {
     position: absolute ;
     left: 45%;
     top: 95%;
-    color: #FFF;
+    color: #525151;
 }
 
 @media only screen and (max-width: 768px){
