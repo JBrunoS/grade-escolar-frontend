@@ -150,33 +150,28 @@ export default function Grade(){
 
     useEffect(() => {
         
-        if (disciplina_id) {
-            api.get(`professor/disciplina/${disciplina_id}`, {
-                headers: {
-                    Authorization: escola_id,
-                }
-            }).then(response => {
-                setProfessores(response.data)
-                
-            })
-        }
+        api.get(`professor`, {
+            headers: {
+                Authorization: escola_id,
+            }
+        }).then(response => {
+            setProfessores(response.data)
+            
+        })
         
-    }, [disciplina_id, escola_id]);
+    }, [escola_id]);
 
     useEffect(() => {
         
-        if (nivel_id) {
-            api.get(`disciplinas/nivel/${nivel_id}`, {
+            api.get(`disciplinas`, {
                 headers: {
                     Authorization: escola_id,
                 }
             }).then(response => {
-                setDisciplinas(response.data)
-                
+                setDisciplinas(response.data)  
             })
-        }
         
-    }, [nivel_id, escola_id]);
+    }, [escola_id]);
 
     useEffect(() => {
         api.get('professor', {
