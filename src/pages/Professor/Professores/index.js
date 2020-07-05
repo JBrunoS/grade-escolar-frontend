@@ -42,7 +42,7 @@ export default function Professor(){
     }, [escola_id]);
 
     useEffect(() => {
-        api.get('disciplinas/name', {
+        api.get('disciplinas', {
             headers: {
                 Authorization: escola_id,
             }
@@ -119,7 +119,7 @@ export default function Professor(){
             return
         }
         try {
-            const response = await api.get(`disciplinas/${disciplina}`, {
+            const response = await api.get(`disciplinas/name/${disciplina}`, {
                 headers: {
                     Authorization: escola_id
                 }
@@ -128,7 +128,7 @@ export default function Professor(){
             setIncidents(response.data)
 
         } catch (error) {
-            alert(error.response.data.error)
+            console.log({error})
         }
        
     }
@@ -185,7 +185,7 @@ export default function Professor(){
                         <button type='button' onClick={handleSearchByDisciplina} ><FaSearch size={18} color='#FFF' /></button>
                     </div>
                    
-                </form>
+                </form> 
                 <section>
 
                 {incidents.map(incidents => (

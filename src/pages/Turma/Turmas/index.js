@@ -15,6 +15,7 @@ export default function Turmas(){
     const [nome_turma, setNomeTurma] = useState('')
     const [nivel_id, setNivelId] = useState('')
     const [turno_id, setTurnoId] = useState('')
+    const [sala, setSala] = useState('')
 
 
     const [turnos, setTurnos] = useState([])
@@ -39,11 +40,12 @@ export default function Turmas(){
         }
       };
 
-      function openEditModal(id, nome, nivel_id, turno_id){
+      function openEditModal(id, nome, nivel_id, turno_id, sala){
           setIdTurma(id)
           setNomeTurma(nome)
           setNivelId(nivel_id)
           setTurnoId(turno_id)
+          setSala(sala)
 
           
         setEditIsOpen(true)
@@ -207,6 +209,8 @@ export default function Turmas(){
                                 <option key={incidents.id} value={incidents.id}> {incidents.turno} </option>
                         ))}
                     </select>
+
+                    <input value={sala} onChange={ e => setSala(e.target.value)} />
                     <button type='button' onClick={() => handleTurmaEdit()}>Editar</button>
                 </form>
             </Modal>
@@ -253,9 +257,10 @@ export default function Turmas(){
                         <p>Nível: <span> {incidents.nome_nivel} </span></p>
                         <p>Turno: <span> {incidents.turno} </span></p>
                         <p>Código da turma: <span> {incidents.id} </span></p>
+                        <p>Sala: <span> {incidents.sala} </span></p>
 
                         <div>
-                        <Link onClick={() => openEditModal(incidents.id, incidents.nome_turma, incidents.nivel_id, incidents.turno_id)}><FaEdit size={25} color='#FCA14D' /></Link>
+                        <Link onClick={() => openEditModal(incidents.id, incidents.nome_turma, incidents.nivel_id, incidents.turno_id, incidents.sala)}><FaEdit size={25} color='#FCA14D' /></Link>
                         <Link onClick={() => handleDelete(incidents.id)}><FaTrashAlt size={25} color='#FB1616' /></Link>
                         </div>
                         

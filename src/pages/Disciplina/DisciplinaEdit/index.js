@@ -10,8 +10,8 @@ import './style.css'
 export default function EditDisciplina(){
     const [disciplina, setDisciplina] = useState('');
     const [carga_horaria, setCargahoraria] = useState('');
-    const [professor_id, setProfessor] = useState('');
-    const [nivel_id, setNivel] = useState('');
+    // const [professor_id, setProfessor] = useState('');
+    // const [nivel_id, setNivel] = useState('');
 
     const [professores, setProfessores] = useState([]);
     
@@ -28,7 +28,6 @@ export default function EditDisciplina(){
         }).then(response => {
             setDisciplina(response.data.nome_disciplina)
             setCargahoraria(response.data.carga_horaria)
-            setNivel(response.data.nome_nivel)
         })
     }, [userID, escola_id]);
     
@@ -46,7 +45,7 @@ export default function EditDisciplina(){
     async function handleEdit(e){
         e.preventDefault();
 
-        const data = { carga_horaria, professor_id};
+        const data = { disciplina, carga_horaria};
         
         try{
             api.put(`disciplinas/${userID}`, data, {
@@ -59,7 +58,7 @@ export default function EditDisciplina(){
             })
 
         } catch (error) {
-            alert('Não foi possível alterar informações!');
+            alert(error.response.data.error);
         }
     }
 
@@ -81,7 +80,7 @@ export default function EditDisciplina(){
                 <form onSubmit={handleEdit}>
                     <input
                         placeholder='Nome' 
-                        disabled
+                        
                         value={disciplina}
                         onChange={e => setDisciplina(e.target.value)}
                     />
@@ -91,7 +90,7 @@ export default function EditDisciplina(){
                         value={carga_horaria}
                         onChange={e => setCargahoraria(e.target.value)}
                     />
-                    <select    
+                    {/* <select    
                         value={professor_id}
                         onChange={e => setProfessor(e.target.value)}
                     >
@@ -106,7 +105,7 @@ export default function EditDisciplina(){
                         disabled
                         value={nivel_id}
                         onChange={e => setNivel(e.target.value)}
-                    />
+                    /> */}
                     
                     
                     <button type='submit'>editar</button>

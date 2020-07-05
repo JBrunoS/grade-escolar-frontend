@@ -51,7 +51,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 10px;
-    background: #f1f1f1;
+    background: #F2F4EE;
     box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
     border-radius: 12px;
     padding: 30px;
@@ -65,12 +65,12 @@
     border-radius: 8px;
     padding: 10px;
     border-width: 0;
-    box-shadow: 0px 2px 0px #337ed4;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
     font-size: 18px;
 }
 
 .component-new-disciplina form select {
-    box-shadow: 0px 2px 0px #337ed4;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
 }
 
 .component-new-disciplina form button {
@@ -78,8 +78,7 @@
     height: 38px;
     border-width: 0;
     border-radius: 8px;
-    background-color: #337ed4;
-    box-shadow: 0px 4px 0px #255b99;
+    background-color: #395B7E;
     color: #FFF;
     margin-top: 10px;
     font-size: 26px;

@@ -10,8 +10,8 @@ import './style.css'
 export default function DisciplinaRegister(){
     const [nome_disciplina, setNome] = useState('');
     const [carga_horaria, setCargahoraria] = useState('');
-    const [professor_id, setProfessor] = useState('');
-    const [nivel_id, setNivel] = useState('');
+    // const [professor_id, setProfessor] = useState('');
+    // const [nivel_id, setNivel] = useState('');
     const [niveis, setNiveis] = useState([]);
     const [professores, setProfessores] = useState([]);
     
@@ -45,15 +45,10 @@ export default function DisciplinaRegister(){
         const data = {
             nome_disciplina,
             carga_horaria, 
-            professor_id,
-            nivel_id,
         }
 
-        console.log(data)
-        console.log(escola_id)
-
         try {
-            if (nome_disciplina === '' || carga_horaria === '' || professor_id === '' || nivel_id === '') {
+            if (nome_disciplina === '' || carga_horaria === '') {
                 alert('Todos os campos são necessários');
             }else{
                 
@@ -69,7 +64,8 @@ export default function DisciplinaRegister(){
 
 
         } catch (error) {
-            alert('Não foi possível concluir cadastro!');
+            alert(error.response.data.error);
+            
         }
     }
 
@@ -99,7 +95,7 @@ export default function DisciplinaRegister(){
                         value={carga_horaria}
                         onChange={e => setCargahoraria(e.target.value)}
                     />
-                    <select    
+                    {/* <select    
                         value={professor_id}
                         onChange={e => setProfessor(e.target.value)}
                     >
@@ -118,7 +114,7 @@ export default function DisciplinaRegister(){
                             <option key={incidents.id} value={incidents.id}>{incidents.nome_nivel}</option>
                         ))}
                         
-                    </select>
+                    </select> */}
                     
                     <button type='submit'>cadastrar</button>
                 </form>

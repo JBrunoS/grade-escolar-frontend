@@ -79,7 +79,7 @@ export default function LandPage(){
                     <div className="dropdown-content">
                         <Link to="/login">Login</Link>
                         <Link to="/">Quem somos</Link>
-                        <Link to="/">Funcionalidades</Link>
+                        <Link to="/funcionalities">Funcionalidades</Link>
                         <Link to="/contact">Contato</Link>
                     </div>
                 </div>

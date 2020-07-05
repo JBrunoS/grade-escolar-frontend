@@ -109,7 +109,7 @@ export default function Home(){
                     
                     <textarea rows={4} maxLength={400} placeholder='Mensagem...' value={descricao} onChange={ e=> setDescricao(e.target.value)} />
                     <div className='content-buttons'>
-                        <input type='file' ref={files}/>
+                        {/* <input type='file' ref={files}/> */}
                         <button onClick={handleMessage}>enviar</button>
                     </div>
                     

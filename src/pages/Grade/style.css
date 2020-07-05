@@ -105,6 +105,20 @@
     color: #FFFFFF;
 }
 
+.button-close-modal{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 35px;
+    font-size: 25px;
+    font-weight: 700;
+    background-color: transparent;
+    border-width: 0px;
+    color: #646363;
+    z-index: 2;
+}
+
 
 .container-grade{
     display: flex;

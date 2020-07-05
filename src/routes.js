@@ -22,6 +22,7 @@ import Profile from '../src/pages/Perfil/index'
 import LandPage from '../src/pages/LandPage'
 import About from '../src/pages/About'
 import Contact from '../src/pages/Contact'
+import Funcionalities from '../src/pages/Funcionalities'
 
 
 
@@ -51,6 +52,7 @@ export default function Routes(){
                 <Route path='/profile' component={Profile} />                
                 <Route path='/about' component={About} />                
                 <Route path='/contact' component={Contact} />
+                <Route path='/funcionalities' component={Funcionalities} />
 
         </Switch>
     </BrowserRouter>

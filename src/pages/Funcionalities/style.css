@@ -1,0 +1,209 @@
+.container-funcionalities {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+/* DEFINIÇÃO DO HEADER*/
+
+.container-funcionalities .header{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    z-index: 4;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: rgb(250, 250, 250);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+}
+
+
+.container-funcionalities .small-header{
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    z-index: 4;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    background-color: rgb(250, 250, 250);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25); 
+}
+
+
+
+.header a, .small-header a{
+    font-size: 22px;
+    text-decoration: none;
+    color: #337ed4;
+}
+
+.dropbtn {
+    background-color: transparent;
+    box-shadow: 0px 0px 0px;
+    margin-right: 50px;
+    border-width: 0px;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-left: -100px;
+  }
+  
+  .dropdown-content a {
+    width: 100%;
+    color: black;
+    padding: 22px 10px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+  @media only screen and (max-width: 768px){
+    .header, .small-header {
+        padding: 20px;
+        width: 100%;
+    }
+    .header a, .small-header a{
+        font-size: 18px;
+    }
+    
+    .dropbtn {
+        margin-right: 5px;
+    }
+
+    .dropdown-content {
+        margin-left: -150px;
+        
+    }
+  }
+
+  .container-funcionalities .body-funcionalities{
+      width: 100%;
+      height: auto;
+      margin-top: 8%;
+      
+  }
+
+  .container-funcionalities .footer {
+    width: 100%;
+    height: 160px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px -3px 0px #337ed4;
+}
+
+.container-funcionalities .footer div:first-child {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
+}
+
+
+.container-funcionalities .footer div:first-child div:first-child a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.container-funcionalities .footer div:first-child div + div{
+    width: 50%;
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #ffffff;
+}
+
+.container-funcionalities .footer div:first-child div + div span{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.container-funcionalities .footer div:first-child div + div p{
+    font-size: 15px;
+}
+
+.container-funcionalities .footer div:last-child{
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+@media only screen and (max-width: 768px){
+    
+    .container-funcionalities .footer {
+        width: 100%;
+        height: auto;
+        
+    }
+    
+    .container-funcionalities .footer div:first-child {
+        
+        flex-direction: column;
+        align-items: flex-start;
+        padding-inline-start: 0px;
+        
+    }
+    
+    
+    .container-funcionalities .footer div:first-child div:first-child a{
+        margin-left: 10px;
+        font-size: 22px;
+        margin-top: 10px;
+        
+    }
+    
+    .container-funcionalities .footer div:first-child div + div{
+        width: 100%;
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .container-funcionalities .footer div:first-child div + div span{
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    
+    .container-funcionalities .footer div:first-child div + div p{
+        font-size: 14px;
+    }
+    
+    .container-funcionalities .footer div:last-child{
+        margin-bottom: 15px;
+        color: #ffffff;
+    }
+}

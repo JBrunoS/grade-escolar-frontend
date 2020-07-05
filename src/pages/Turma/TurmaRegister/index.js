@@ -11,6 +11,7 @@ export default function TurmaRegister(){
     const [nome_turma, setNome] = useState('');
     const [nivel_id, setNivel] = useState('');
     const [turno_id, setTurno] = useState('');
+    const [sala, setSala] = useState('');
     
     const [niveis, setNiveis] = useState([]);
     const [turnos, setTurnos] = useState([]);
@@ -46,10 +47,11 @@ export default function TurmaRegister(){
             nome_turma,
             nivel_id, 
             turno_id,
+            sala,
         }
 
         try {
-            if (nome_turma === '' || nivel_id === '' || turno_id === '' ) {
+            if (nome_turma === '' || nivel_id === '' || turno_id === '' || sala === '') {
                 alert('Todos os campos são necessários');
             }else{
                 
@@ -59,7 +61,7 @@ export default function TurmaRegister(){
                 }
             })
 
-            alert(`Cadastro realizado com sucesso ${response.data.nome_disciplina}`)
+            alert(`Cadastro realizado com sucesso`)
             history.push('/turma');
             }
 
@@ -84,20 +86,26 @@ export default function TurmaRegister(){
                     </div>
                    
                 <form onSubmit={handleRegister}>
+
                     <input 
                         placeholder='Nome' 
                         value={nome_turma}
                         onChange={e => setNome(e.target.value)}
                     />
-                    <select    
-                        value={turno_id}
-                        onChange={e => setTurno(e.target.value)}
-                    >
-                        <option value=''>Turnos</option>
-                        {turnos.map(incidents => (
-                            <option key={incidents.id} value={incidents.id}>{incidents.turno}</option>
-                        ))}
-                    </select>
+                    
+                    <div>
+                        <select    
+                            value={turno_id}
+                            onChange={e => setTurno(e.target.value)}
+                        >
+                            <option value=''>Turnos</option>
+                            {turnos.map(incidents => (
+                                <option key={incidents.id} value={incidents.id}>{incidents.turno}</option>
+                            ))}
+                        </select>
+                        <input placeholder='Sala' value={sala}  onChange={e => setSala(e.target.value)}/>
+                    </div>
+                    
                     
                     <select    
                         value={nivel_id}

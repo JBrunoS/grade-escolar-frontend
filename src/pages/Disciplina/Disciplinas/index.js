@@ -78,7 +78,7 @@ export default function Disciplina(){
                 setIncidents(response.data);
             })
         } catch (error) {
-            
+            alert(error.response.data.error);
         }
     }
 
@@ -96,7 +96,7 @@ export default function Disciplina(){
 
             setIncidents(response.data)
         } catch (error) {
-            
+            alert(error.response.data.error);
         }
     }
 
@@ -114,7 +114,7 @@ export default function Disciplina(){
 
             setIncidents(response.data)
         } catch (error) {
-            
+            alert(error.response.data.error);
         }
     }
 
@@ -132,7 +132,7 @@ export default function Disciplina(){
 
             setIncidents(response.data)
         } catch (error) {
-            
+            alert(error.response.data.error);
         }
     }
 
@@ -199,13 +199,9 @@ export default function Disciplina(){
                             <p>Disciplina: <span> { disciplina.nome_disciplina } </span> </p>
                             <p>Carga horária: <span> {disciplina.carga_horaria} </span> </p>
                         </div>
-                        <div>
-                            <p>Professor: <span> {disciplina.nome} </span></p>
-                            <p>Código: <span> {disciplina.id} </span> </p>
-                        </div>
                         <Link to='/edit/disciplina' ><FaEdit size={25} color='#FCA14D' onClick={() => localStorage.setItem('userID', disciplina.id)} /></Link>
                         <Link to ><FaTrashAlt size={25} color='#FB1616' onClick={() => handleDelete(disciplina.id)} /></Link>
-                </div>
+                    </div>
                 ))}
                 
                 </section>

@@ -65,8 +65,8 @@ export default function Grade(){
           left                  : '50%',
           right                 : 'auto',
           bottom                : 'auto',
-          width                 : '90%',
-          height                : '90%',
+          width                 : '60%',
+          height                : '70%',
           marginRight           : '-50%',
           transform             : 'translate(-50%, -50%)'
         }
@@ -369,7 +369,7 @@ export default function Grade(){
         style={professorStyles}
         contentLabel="Professores"
         >
-    
+        <button className='button-close-modal' onClick={closeProfessorModal} >X</button>
         <div className="grade-professor">
 
             <div className="grade-professor-horario">
@@ -446,12 +446,12 @@ export default function Grade(){
         style={registerStyles}
         contentLabel="Register"
         >
-    
+        <button className='button-close-modal' onClick={closeRegisterModal} >X</button>
         <form className='form-modal-register'  onSubmit={handleRegister}>
-            <h1>Adcionar na grade</h1>
-            <input disabled value={nivel_id} />
+            <h1>Adicionar na grade</h1>
+            {/* <input disabled value={nivel_id} />
             <input disabled value={turma_id} />
-            <input disabled value={turno_id} />
+            <input disabled value={turno_id} /> */}
            <select 
                 value={disciplina_id}
                 onChange={e => setDisciplinaId(e.target.value)}
