@@ -19,7 +19,7 @@ export default function ForgotPassword(){
             
             alert(`Mensagem enviada para o email ${response.data.email}`);
             
-            history.push('/');
+            history.push('/login');
 
         } catch (error) {
             alert('E-mail não cadastrado no sistema');
@@ -40,7 +40,7 @@ export default function ForgotPassword(){
                     <button type='submit'>Recuperar <FaPaperPlane size={18} color='#FFF' /></button>
                 </form>
                 <div>
-                    <Link to='/' >Voltar</Link>
+                    <Link to='/login' >Voltar</Link>
          </div>
                 
             </div>

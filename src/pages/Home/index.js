@@ -18,7 +18,7 @@ export default function Home(){
     const [professor, setProfessor] = useState(false)
     const [aluno, setAluno] = useState(false)
     const [descricao, setDescricao] = useState('')
-    const files = createRef();
+    // const files = createRef();
 
 
     useEffect(() => {
@@ -58,18 +58,33 @@ export default function Home(){
     async function handleMessage(){
         // alert(`${professor}, ${aluno}, ${descricao}, ${files.current.files[0].name}`)
 
-        const file = files.current.files[0];
+        // const file = files.current.files[0];
 
-        const data = {descricao, professor, aluno, file }
+        const data = {descricao, professor, aluno }
 
+
+        if (descricao === '' ) {
+            alert('Por favor, a mensagem ainda está vazia')
+            return
+        }
+
+        if (professor === false && aluno === false) {
+            alert('Por favor, selecionar um dos destinatários')
+            return
+        }
+        
         try {
             await api.post(`message/${escola_id}`, data)
+            
 
-            alert('Passou')
+            alert('Mensagem enviada com sucesso!')
         } catch (error) {
             alert('Não deu certo')
         }
 
+        setProfessor(false)
+        setAluno(false)
+        setDescricao('')
     }
 
     return(
@@ -100,9 +115,9 @@ export default function Home(){
                 <div className='content-message'>
                     <h2>Enviar Mensagem</h2>
                     <div>
-                        <input type='checkbox' value={professor} onChange={e => setProfessor(e.target.checked)} />
+                        <input type='checkbox' checked={professor} onChange={e => setProfessor(e.target.checked)} />
                         <label>Professores</label>
-                        <input type='checkbox' value={aluno} onChange={e => setAluno(e.target.checked)} />
+                        <input type='checkbox' checked={aluno} onChange={e => setAluno(e.target.checked)} />
                         <label>Alunos</label>
 
                     </div>

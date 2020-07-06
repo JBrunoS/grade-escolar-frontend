@@ -30,7 +30,7 @@ export default function Contact(){
                     <button className="dropbtn"><FaBars size={25} color='#337ed4' /></button>
                     <div className="dropdown-content">
                         <Link to="/login">Login</Link>
-                        <Link to="/about">Quem somos</Link>
+                        <Link to="/">Quem somos</Link>
                         <Link to="/funcionality">Funcionalidades</Link>
                         <Link to="/contact">Contato</Link>
                     </div>

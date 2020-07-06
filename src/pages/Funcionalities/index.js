@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom'
 import { FaBars } from 'react-icons/fa'
 
 import cellphone from '../../assets/cell.png'
+import demonstration from '../../assets/demonstration.gif'
+import pc from '../../assets/pc.png'
+import cellphone1 from '../../assets/cell1.png'
 
 import './style.css'
 
@@ -43,8 +46,20 @@ export default function Funcionalities(){
             </div>
             
             <div className='body-funcionalities'>
-                <div></div>
-                <div></div>
+                <div>
+                    <div>
+                        <p>Agenda individuais para cada professor</p>
+                        <span> - Cada professor vai conseguir ter acesso a sua agenda</span>
+                        <span> - Registrar observações para a próxima aula</span>
+                        <span> - Mensagens e observações da direção/coordenação aparecem no App</span>
+                    </div>
+                    <img src={cellphone} />
+                    <img className='demonstration' src={demonstration} />
+                </div>
+                <div>
+                    <img src={pc}></img>
+                    <img src={cellphone1}></img>
+                </div>
                 <div></div>
             </div>
             
